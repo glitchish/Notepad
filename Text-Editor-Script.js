@@ -1,6 +1,6 @@
 function save() {
 	if (promptFilename = prompt("Save file as", "*.txt")) {
-		var textBlob = new Blob([document.getElementById("canvas-textarea").value], {type:'text/plain'});
+		var textBlob = new Blob([document.getElementById("text-area").value], {type:'text/plain'});
 		var downloadLink = document.createElement("a");
 		downloadLink.download = promptFilename;
 		downloadLink.innerHTML = "Download File";
