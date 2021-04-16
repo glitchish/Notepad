@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Text Editor
+    </title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      textarea {
+        appearance:none;
+        color: white;
+        background:#000000;
+      }
+      textarea:focus {
+        outline:none;
+      }
+      
+      textarea {
+        display:block;
+        border:none;
+        margin:0;
+        padding:0;
+        overflow:auto;
+        height:100%;
+        width:100%;
+        resize:none;
+      }
+    </style>
+    <script src="Text-Editor-Script.js"></script>
+    <textarea id="canvas-textarea" rows="30"></textarea>
+    <button id="save-button" onclick="save();">Save</button>
+  </body>
+</html>
