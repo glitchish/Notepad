@@ -1,12 +1,13 @@
 function save() {
-	if (promptFilename = prompt("Save file as", "*.txt")) {
+  fileN = document.getElementById("file-name").value;
+	if (fileN !== "") {
 		var textBlob = new Blob([document.getElementById("text-area").value], {type:'text/plain'});
 		var downloadLink = document.createElement("a");
-		downloadLink.download = promptFilename;
+		downloadLink.download = fileN;
 		downloadLink.innerHTML = "Download File";
 		downloadLink.href = window.URL.createObjectURL(textBlob);
 		downloadLink.click();
-    delete downloadLink;
-    delete textBlob;
+		delete downloadLink;
+		delete textBlob;
 	}
 }
