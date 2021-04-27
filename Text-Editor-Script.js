@@ -10,4 +10,7 @@ function save() {
 		delete downloadLink;
 		delete textBlob;
 	}
+	else {
+		alert("Please include a filename");
+	}
 }
