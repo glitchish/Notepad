@@ -1,9 +1,15 @@
-document.getElementById('text-area').addEventListener('keydown', function(e) {
-  if (e.key == 'Tab') {
-    e.preventDefault();
-    var start = this.selectionStart;
-    var end = this.selectionEnd;
-    this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
-    this.selectionStart = this.selectionEnd = start + 1;
-  }
-});
+function activeTabbing(id) {
+    var element = document.getElementById(id);
+    element.onkeydown = function(e) {
+        if (e.keyCode === 9) {
+            var val = this.value,
+                start = this.selectionStart,
+                end = this.selectionEnd;
+            this.value = val.substring(0, start) + '\t' + val.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+            return false;
+
+        }
+    };
+}
+activeTabbing('text-area');
