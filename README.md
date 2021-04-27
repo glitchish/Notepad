@@ -10,6 +10,7 @@ Features:
 - [x] Save button w/ Filename input
 - [x] Working Navbar
 - [x] Working JS
+- [ ] Tabbing
 
 ---
 
